@@ -1,0 +1,51 @@
+@import '../style/functions.scss';
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: desktop-vw(14) desktop-vw(48);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: desktop-vw(1) solid rgba(37, 113, 255, 0.1);
+  box-sizing: border-box;
+
+  &__logo {
+    font-size: desktop-vw(36);
+    font-weight: 700;
+    background: linear-gradient(269.95deg, #e323ff 0.02%, #7517f8 97.45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    mix-blend-mode: normal;
+
+    &:hover {
+      color: #4e5c80;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &-link {
+      display: block;
+      padding: desktop-vw(10) desktop-vw(24);
+      font-weight: 700;
+      font-size: desktop-vw(16);
+      line-height: 148%;
+      text-transform: uppercase;
+      color: #4e5c80;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}

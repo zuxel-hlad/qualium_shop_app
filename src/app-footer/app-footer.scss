@@ -1,0 +1,20 @@
+@import '../style/functions.scss';
+
+.app-footer {
+  padding: desktop-vw(17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 2, 23, 0.3);
+  border-top: desktop-vw(1) solid rgba(37, 113, 255, 0.1);
+
+  span {
+    display: block;
+    font-weight: 700;
+    font-size: desktop-vw(16);
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #4e5c80;
+    opacity: 0.5;
+  }
+}
