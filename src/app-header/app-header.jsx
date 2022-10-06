@@ -1,32 +1,50 @@
 import './app-header.scss';
+import { NavLink, Link } from 'react-router-dom';
 
 const AppHeader = () => {
   return (
     <header className="app-header">
-      <a href="#" className="app-header__logo">
+      <Link to="/" className="app-header__logo">
         Shop App
-      </a>
+      </Link>
       <nav className="app-header__nav">
         <ul className="app-header__nav-list">
           <li>
-            <a href="!#" className="app-header__nav-link">
+            <NavLink
+              exact
+              to="/"
+              className="app-header__nav-link"
+              activeClassName="app-header__nav-link_active"
+            >
               Main View
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="!#" className="app-header__nav-link">
+            <NavLink
+              to="/cart-view"
+              className="app-header__nav-link"
+              activeClassName="app-header__nav-link_active"
+            >
               Cart view
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="!#" className="app-header__nav-link">
+            <NavLink
+              to="/edit-view"
+              className="app-header__nav-link"
+              activeClassName="app-header__nav-link_active"
+            >
               EditView
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="!#" className="app-header__nav-link">
+            <NavLink
+              to="/create-view"
+              className="app-header__nav-link"
+              activeClassName="app-header__nav-link_active"
+            >
               Create View
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
