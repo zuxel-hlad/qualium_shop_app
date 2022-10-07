@@ -1,0 +1,17 @@
+@import '../../style/functions.scss';
+
+.main-view {
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 124%;
+    color: #4e5c80;
+    margin-bottom: desktop-vw(48);
+  }
+
+  &__search {
+    margin: 0 auto desktop-vw(48);
+    max-width: desktop-vw(400);
+  }
+}

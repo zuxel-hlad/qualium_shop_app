@@ -1,0 +1,104 @@
+@import '../../style/functions.scss';
+
+// background: 'linear-gradient(207deg, rgba(26,14,74,1) 20%, rgba(83,46,202,1) 80%)'
+// background: 'linear-gradient(207deg, rgba(83,46,202,1) 20%, rgba(26,14,74,1) 80%)'
+// background: 'linear-gradient(231deg, rgba(48,39,103,1) 20%, rgba(163,47,196,1) 80%)'
+
+.app-card {
+  padding: desktop-vw(15);
+  display: flex;
+  flex-direction: column;
+  width: desktop-vw(316);
+  min-height: desktop-vw(418);
+  background-color: #ccc;
+  background: linear-gradient(207deg, #1a0e4a 20%, #532eca 80%);
+  border-radius: desktop-vw(6);
+  box-shadow: desktop-vw(3) desktop-vw(3) desktop-vw(20) rgba(48, 39, 103, 1);
+
+  &__image {
+    width: 100%;
+    position: relative;
+    height: desktop-vw(200);
+    overflow: hidden;
+    margin-bottom: desktop-vw(16);
+    border-radius: desktop-vw(6);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-style: normal;
+      font-weight: 700;
+      font-size: desktop-vw(24);
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      background: linear-gradient(269.95deg, #e323ff 0.02%, #7517f8 97.45%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      mix-blend-mode: normal;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    margin-bottom: desktop-vw(16);
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: desktop-vw(24);
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: desktop-vw(16);
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: desktop-vw(16);
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #ccc;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__link {
+    display: block;
+    margin-right: desktop-vw(10);
+    padding: desktop-vw(5);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
+    border: desktop-vw(1) solid #fff;
+    border-radius: desktop-vw(4);
+    transition: opacity 0.3s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: #ffffff;
+      opacity: 0.3;
+    }
+  }
+}

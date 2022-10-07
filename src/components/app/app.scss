@@ -1,9 +1,11 @@
-@import '../style/functions.scss';
+@import '../../style/functions.scss';
 
 .app {
   padding: desktop-vw(73) 0 0 0;
 
   &-main {
+    display: flex;
+    align-items: initial;
     padding: 0 desktop-vw(48);
     min-height: calc(100vh - desktop-vw(134));
   }

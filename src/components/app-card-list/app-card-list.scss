@@ -1,0 +1,9 @@
+@import '../../style/functions.scss';
+
+.card-list {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

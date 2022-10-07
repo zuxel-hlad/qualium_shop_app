@@ -1,0 +1,56 @@
+@import '../../style/functions.scss';
+
+.search-form {
+  width: 100%;
+  position: relative;
+
+  & input {
+    width: 100%;
+    font-weight: 500;
+    font-size: desktop-vw(18);
+    color: #2f2ae8;
+    line-height: 140%;
+    opacity: 0.7;
+    padding: desktop-vw(20) desktop-vw(66) desktop-vw(20) desktop-vw(36);
+    border: desktop-vw(2) solid #2f2ae8;
+    border-radius: desktop-vw(80);
+    background: transparent;
+
+    &:focus-visible {
+      outline: transparent;
+    }
+
+    &::placeholder {
+      color: #4e5c80;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  &__clear {
+    position: absolute;
+    top: desktop-vw(19);
+    right: desktop-vw(25);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: desktop-vw(32);
+    height: desktop-vw(32);
+    overflow: hidden;
+    border-radius: 50%;
+    transition: opacity .3s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}

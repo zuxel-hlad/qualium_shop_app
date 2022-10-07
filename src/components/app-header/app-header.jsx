@@ -1,9 +1,11 @@
 import './app-header.scss';
+import { useScroll } from '../../hooks/useScroll';
 import { NavLink, Link } from 'react-router-dom';
 
 const AppHeader = () => {
+  const { scroll } = useScroll();
   return (
-    <header className="app-header">
+    <header className={`app-header${!scroll ? ' app-header_hide' : ''}`}>
       <Link to="/" className="app-header__logo">
         Shop App
       </Link>

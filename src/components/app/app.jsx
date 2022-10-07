@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import AppHeader from '../app-header/app-header';
-import AppFooter from '../app-footer/app-footer';
-import CartView from '../pages/cart-view/cart-view';
-import CreateView from '../pages/create-view/create-view';
-import EditView from '../pages/edit-view/edit-view';
-import MainView from '../pages/main-view/main-view';
+import AppHeader from '../../components/app-header/app-header';
+import AppFooter from '../../components/app-footer/app-footer';
+import CreateView from '../../pages/create-view/create-view';
+import EditView from '../../pages/edit-view/edit-view';
+import MainView from '../../pages/main-view/main-view';
+import CartView from '../../pages/cart-view/cart-view';
 import './app.scss';
 
 const App = () => {
