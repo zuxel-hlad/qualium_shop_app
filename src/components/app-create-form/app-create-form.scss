@@ -1,0 +1,94 @@
+@import "../../style/functions.scss";
+
+.create-form {
+  width: 100%;
+  max-width: desktop-vw(400);
+  min-height: desktop-vw(550);
+  border-radius: desktop-vw(20);
+  padding: desktop-vw(20);
+  border: desktop-vw(2) solid #2f2ae8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  label {
+    display: inline-block;
+    color: #4e5c80;
+    font-weight: 700;
+    margin-bottom: desktop-vw(10);
+  }
+  input {
+    padding: desktop-vw(15);
+    border: desktop-vw(2) solid #2f2ae8;
+    background: transparent;
+    width: 100%;
+    margin-bottom: desktop-vw(16);
+    border-radius: desktop-vw(20);
+    color: #4e5c80;
+
+    &::placeholder {
+        color: #4e5c80;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+    &:focus-visible {
+      outline: transparent;
+    }
+  }
+
+  textarea {
+    padding: desktop-vw(15);
+    min-height: desktop-vw(100);
+    border: desktop-vw(2) solid #2f2ae8;
+    border-radius: desktop-vw(20);
+    background: transparent;
+    width: 100%;
+    resize: none;
+    color: #4e5c80;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
+
+    &::placeholder {
+        color: #4e5c80;
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+    &::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+
+    &:focus-visible {
+      outline: transparent;
+    }
+  }
+
+  button {
+    display: block;
+    width: max-content;
+    margin: auto auto 0 auto;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2f2ae8;
+    background: transparent;
+    padding: desktop-vw(15) desktop-vw(25);
+    border-radius: desktop-vw(20);
+    border: desktop-vw(2) solid #2f2ae8;
+    cursor: pointer;
+    transition: color .3s ease, border-color .3s ease;
+
+    &:hover {
+        border-color: #7517f8;
+        color: #7517f8;
+    }
+
+    &:active {
+        opacity: .5;
+    }
+  }
+}

@@ -10,11 +10,11 @@ export const useScroll = () => {
     if (st > lastScrollTop) {
       // downscroll code
       setScroll((prevScroll) => (prevScroll = false))
-      console.log('down', scroll);
+      // console.log('down', scroll);
     } else {
       // upscroll code
       setScroll((prevScroll) => (prevScroll = true))
-      console.log('up', scroll);
+      // console.log('up', scroll);
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   };

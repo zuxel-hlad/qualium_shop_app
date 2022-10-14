@@ -11,7 +11,7 @@
     color: #2f2ae8;
     line-height: 140%;
     opacity: 0.7;
-    padding: desktop-vw(20) desktop-vw(66) desktop-vw(20) desktop-vw(36);
+    padding: desktop-vw(15) desktop-vw(66) desktop-vw(15) desktop-vw(36);
     border: desktop-vw(2) solid #2f2ae8;
     border-radius: desktop-vw(80);
     background: transparent;
@@ -30,7 +30,8 @@
 
   &__clear {
     position: absolute;
-    top: desktop-vw(19);
+    top: 50%;
+    transform: translateY(-50%);
     right: desktop-vw(25);
     border: none;
     background: transparent;

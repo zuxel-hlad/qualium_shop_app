@@ -1,6 +1,8 @@
-import AppCardList from '../../components/app-card-list/app-card-list';
-import AppSearchForm from '../../components/app-serach-form/app-search-form';
-import './main-view.scss';
+import AppCardList from "../../components/app-card-list/app-card-list";
+import AppSearchForm from "../../components/app-serach-form/app-search-form";
+import "./main-view.scss";
+
+
 
 const MainView = () => {
   return (
