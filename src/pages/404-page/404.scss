@@ -1,0 +1,52 @@
+@import "../../style/functions.scss";
+
+.app-error {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+
+  &__error {
+    &-title {
+      font-size: desktop-vw(68);
+      font-weight: 700;
+      text-transform: uppercase;
+      background: linear-gradient(291.64deg, #151cea 37.49%, #734de1 101.67%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      mix-blend-mode: normal;
+    }
+
+    &-description {
+      font-weight: 500;
+      font-size: desktop-vw(28);
+      line-height: 160%;
+      letter-spacing: 0.01em;
+      color: #3935ff;
+      mix-blend-mode: normal;
+      margin-bottom: desktop-vw(50);
+    }
+
+    &-link {
+      width: max-content;
+      padding: desktop-vw(15) desktop-vw(30);
+      text-align: center;
+      background-color: #0036f3;
+      border-radius: desktop-vw(80);
+      font-weight: 700;
+      font-size: desktop-vw(18);
+      line-height: 140%;
+      text-transform: uppercase;
+      color: #ffffff;
+      transition: background-color .3s ease;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #144AFF;
+      }
+    }
+  }
+}

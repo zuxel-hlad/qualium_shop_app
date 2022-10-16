@@ -1,11 +1,11 @@
-import './app-header.scss';
-import { useScroll } from '../../hooks/useScroll';
-import { NavLink, Link } from 'react-router-dom';
+import "./app-header.scss";
+import { useScroll } from "../../hooks/useScroll";
+import { NavLink, Link } from "react-router-dom";
 
 const AppHeader = () => {
   const { scroll } = useScroll();
   return (
-    <header className={`app-header${!scroll ? ' app-header_hide' : ''}`}>
+    <header className={`app-header${!scroll ? " app-header_hide" : ""}`}>
       <Link to="/" className="app-header__logo">
         Shop App
       </Link>
@@ -28,15 +28,6 @@ const AppHeader = () => {
               activeClassName="app-header__nav-link_active"
             >
               Cart view
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/edit-view"
-              className="app-header__nav-link"
-              activeClassName="app-header__nav-link_active"
-            >
-              EditView
             </NavLink>
           </li>
           <li>

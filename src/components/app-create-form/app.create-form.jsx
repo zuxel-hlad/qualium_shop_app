@@ -1,18 +1,35 @@
 import { useState } from "react";
+import { AppContext } from "../app-provider/app-provider";
+import { useContext } from "react";
 import "./app-create-form.scss";
 
-const AppCreateForm = ({productPrice, productTitle, productDescription}) => {
-  const [title, setTitle] = useState(productTitle);
-  const [price, setPrice] = useState(productPrice);
-  const [description, setDescription] = useState(productDescription);
+const randomProductId = (min, max) => {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+};
+
+const AppCreateForm = ({
+  productPrice,
+  productTitle,
+  productDescription,
+  btnText,
+}) => {
+  const [title, setTitle] = useState(productTitle ? productTitle : "");
+  const [price, setPrice] = useState(productPrice ? productPrice : "");
+  const [description, setDescription] = useState(
+    productDescription ? productDescription : ""
+  );
+  const { createProducts } = useContext(AppContext);
 
   const createProduct = (e) => {
     e.preventDefault();
     if (!title && price === "" && !description) return;
-    console.log({
+    createProducts({
       title,
       price: Number(price),
-      description,
+      description: description.split('" "').join(''),
+      id: randomProductId(1, 25000),
+      quantity: 1
     });
     setTitle("");
     setPrice("");
@@ -44,7 +61,7 @@ const AppCreateForm = ({productPrice, productTitle, productDescription}) => {
         onChange={(e) => setDescription(e.target.value)}
         value={description}
       />
-      <button type="submit">create</button>
+      <button type="submit">{btnText ? btnText : "submit"}</button>
     </form>
   );
 };

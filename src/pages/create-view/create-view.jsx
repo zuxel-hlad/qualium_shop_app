@@ -4,7 +4,7 @@ import "./create-view.scss";
 const CreateView = () => {
   return (
     <section className="section create-view">
-      <AppCreateForm/>
+      <AppCreateForm btnText="create"/>
     </section>
   );
 };
